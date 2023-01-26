@@ -1,0 +1,8 @@
+﻿<Application x:Class="WaveformServer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:WaveformServer" >
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

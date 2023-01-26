@@ -1,0 +1,26 @@
+﻿<Window x:Class="WaveformServer.View.ViewServerControl"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WaveformServer"
+        mc:Ignorable="d"
+        Title="Server Control" Height="480" Width="640"
+        FontFamily="Consolas" FontSize="11" Margin="10,10,10,10"
+        ResizeMode="NoResize">
+    <StackPanel Orientation="Vertical">
+        <CheckBox Content="Log" IsChecked="{Binding IsLogEnabled}"/>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="{Binding IpAddress}"/>
+            <Button Content="Update" Command="{Binding IpButtonClicked}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Port: "/>
+            <TextBox Text="{Binding PortText}" IsEnabled="{Binding PortEnable}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Start" Command="{Binding StartButtonClicked}" IsEnabled="{Binding StartButtonEnabled}"/>
+            <Button Content="End  " Command="{Binding EndButtonClicked}" IsEnabled="{Binding EndButtonEnabled}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
